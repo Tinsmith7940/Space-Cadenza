@@ -6,3 +6,4 @@ This document contains documentation related to the different classes and how th
 			1. Boss -super alien
 			2. Invader -basic enemy
 		2. Player -player character who receives input from the user to move around.
+	2. Asteroid -is generated and then moves around the map.
