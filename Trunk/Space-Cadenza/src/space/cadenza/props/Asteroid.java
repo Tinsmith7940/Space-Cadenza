@@ -9,7 +9,7 @@ public class Asteroid extends SpaceObjects {
 		super();
 	}
 	
-	public Asteroid(int xCoordinate, int yCoordinate, int speed, String image, int health){
-		super(xCoordinate, yCoordinate, speed, image, health);
+	public Asteroid(int xCoordinate, int yCoordinate, int speed, String image){
+		super(xCoordinate, yCoordinate, speed, image);
 	}
 }
