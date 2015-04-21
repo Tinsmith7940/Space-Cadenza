@@ -1,7 +1,4 @@
-/**
- * 
- */
-package src.space.cadenza;
+package space.cadenza;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -10,7 +7,7 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
-import src.space.cadenza.graphics.Renderer;
+import space.cadenza.graphics.Renderer;
 
 
 /**

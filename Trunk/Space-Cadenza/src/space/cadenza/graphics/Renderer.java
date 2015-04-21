@@ -1,8 +1,8 @@
-package src.space.cadenza.graphics;
+package space.cadenza.graphics;
 
 import java.awt.Graphics;
 
-import src.space.cadenza.Game;
+import space.cadenza.Game;
 
 import java.awt.Graphics;
 
