@@ -2,14 +2,14 @@ package space.cadenza.characters;
 
 public class Alien {
 	//File path of the alien sprite
-	String imageSprite;
+	private String imageSprite;
 	//integer representation of alien health
-	int hp;
+	private int hp;
 	//integer representation of alien rate of fire
-	int fireRate;
+	private int fireRate;
 	//X and Y coordinates of alien's current location
 	//X is located at index '0', and Y is located at index '1' in the array
-	int[] currentLocation = new int[2];
+	private int[] currentLocation = new int[2];
 	
 	
 	public Alien() {
@@ -22,12 +22,10 @@ public class Alien {
 		setRateOfFire(rateOfFire);
 		setSprite(image);
 		setCurrentLocation(xCoordinate, yCoordinate); //TODO: need to pass in random spawn location upon creation
-		
-
 	}
 
 	
-	private void setSprite(String image) {
+	public void setSprite(String image) {
 		// TODO Auto-generated method stub
 		imageSprite = image;
 	}
@@ -36,7 +34,7 @@ public class Alien {
 		return imageSprite;
 	}
 
-	private void setRateOfFire(int rateOfFire) {
+	public void setRateOfFire(int rateOfFire) {
 		// TODO Auto-generated method stub
 		fireRate = rateOfFire;
 	}
@@ -45,7 +43,7 @@ public class Alien {
 		return fireRate;
 	}
 
-	private void setHealth(int health) {
+	public void setHealth(int health) {
 		// TODO Auto-generated method stub
 		hp = health;
 	}
@@ -54,7 +52,7 @@ public class Alien {
 		return hp;
 	}
 	
-	private void setCurrentLocation(int x, int y){
+	public void setCurrentLocation(int x, int y){
 		currentLocation[0] = x;
 		currentLocation[1] = y;
 	}
