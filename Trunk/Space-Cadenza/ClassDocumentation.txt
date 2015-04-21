@@ -1,0 +1,8 @@
+This document contains documentation related to the different classes and how they interrelate:
+
+1. SpaceObjects -superclass of all entities that move, have location, and have a sprite
+	1. Characters -superclass of all entities that have health and the ability to fire projectiles
+		1. Alien -superclass of all AI enemies
+			1. Boss -super alien
+			2. Invader -basic enemy
+		2. Player -player character who receives input from the user to move around.
