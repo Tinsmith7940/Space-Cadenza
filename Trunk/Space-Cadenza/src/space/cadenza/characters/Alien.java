@@ -8,7 +8,7 @@ public class Alien {
 	//integer representation of alien rate of fire
 	int fireRate;
 	//X and Y coordinates of alien's current location
-	//X is located at index '0', and Y is located at index '1'
+	//X is located at index '0', and Y is located at index '1' in the array
 	int[] currentLocation = new int[2];
 	
 	
