@@ -43,4 +43,8 @@ public class SpaceObjects {
 		return speed;
 	}
 	
+	public void move(int x, int y) {
+		//TODO: Put logic here
+	}
+	
 }
