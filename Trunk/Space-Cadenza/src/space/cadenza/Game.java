@@ -1,14 +1,21 @@
 package space.cadenza;
 
+import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
+import javax.imageio.ImageIO;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import space.cadenza.enums.GameState;
-
 import space.cadenza.screens.MainMenu;
 import space.cadenza.graphics.Renderer;
 import space.cadenza.screens.MainMenu;
@@ -33,6 +40,8 @@ public class Game extends Canvas implements Runnable {
 	private Thread thread;
 	
 	private Renderer graphics;
+	
+	private JLabel image_pane;
 	
 	public static Game getInstance(){
 		return game;
@@ -66,7 +75,8 @@ public class Game extends Canvas implements Runnable {
 		
 		Graphics g = bs.getDrawGraphics();
 //		g.setColor(Color.BLUE);
-		g.setColor(new Color(10,0,50));
+//		g.setColor(new Color(10,0,50));
+		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, WIDTH, HEIGHT);
 		
 		////////////////////////
@@ -115,17 +125,36 @@ public class Game extends Canvas implements Runnable {
 	}
 	
 	public static void main(String args[]){
+		makeFrame();
+		game.start();
+		
+	}
+	
+	private static void makeFrame(){
 		JFrame frame = new JFrame(TITLE);
 		frame.add(game);
 		frame.setSize(WIDTH, HEIGHT);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel content = (JPanel)frame.getContentPane();
+		
+		JLabel image_pane = new JLabel();
+		image_pane.setBorder(BorderFactory.createMatteBorder(1,1,1,1,Color.BLACK));
+		content.add(image_pane, BorderLayout.LINE_START);
+		
+		try
+		{
+		BufferedImage image = ImageIO.read(new File("images/SpaceShip.png"));
+		image_pane.setIcon(new ImageIcon(image));
+		}
+		catch (Exception e)
+		{}
+		
+		
 		frame.setFocusable(true);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		frame.setVisible(true);
 		frame.pack();
-		game.start();
-		
 	}
 	
 	private synchronized void start(){
