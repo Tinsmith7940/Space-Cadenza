@@ -197,13 +197,13 @@ public class Game extends Canvas implements Runnable, KeyListener {
 	}
 
 
-
+//change
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		if(e == VK_KP_LEFT)
 			{
-						
+				image_pane.move(boundsOp, boundsOp);
 			}
 		if(e == VK_KP_RIGHT)
 			{
