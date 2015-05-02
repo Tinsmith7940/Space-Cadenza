@@ -197,7 +197,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 	}
 
 
-//change
+
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
