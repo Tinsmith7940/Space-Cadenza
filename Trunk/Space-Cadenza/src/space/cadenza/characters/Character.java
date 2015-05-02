@@ -7,6 +7,7 @@ public class Character extends SpaceObjects {
 	//integer representation of alien rate of fire
 	private int fireRate;
 	
+	
 	public Character() {
 		super();
 	}
