@@ -38,9 +38,20 @@ public class SpaceObjects {
 		currentLocation[0] = x;
 		currentLocation[1] = y;
 	}
+	public void setCurrentXLocation(int x)
+	{
+		currentLocation[0] = x;
+	}
+	public void setCurrentYLocation(int y)
+	{
+		currentLocation[1] = y;
+	}
 	
-	public int[] getCurrentLocation() {
-		return currentLocation;
+	public int getCurrentXLocation() {
+		return currentLocation[0];
+	}
+	public int getCurrentYLocation() {
+		return currentLocation[1];
 	}
 	
 	public void setSpeed(int spd){

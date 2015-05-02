@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Point;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
@@ -203,11 +204,17 @@ public class Game extends Canvas implements Runnable, KeyListener {
 		// TODO Auto-generated method stub
 		if(e == VK_KP_LEFT)
 			{
-				image_pane.move(boundsOp, boundsOp);
+				int a = image_pane.getX();
+				int b = image_pane.getY();
+				a--;
+				image_pane.setLocation(a,b);
 			}
 		if(e == VK_KP_RIGHT)
 			{
-						
+			int a = image_pane.getX();
+			int b = image_pane.getY();
+			a++;
+			image_pane.setLocation(a,b);		
 			}
 	}
 
