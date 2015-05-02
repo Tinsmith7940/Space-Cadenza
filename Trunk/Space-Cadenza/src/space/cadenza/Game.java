@@ -201,7 +201,6 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
 		if(e == VK_KP_LEFT)
 			{
 				int a = image_pane.getX();
@@ -218,7 +217,7 @@ public class Game extends Canvas implements Runnable, KeyListener {
 			}
 	}
 
-
+//slight change
 
 	@Override
 	public void keyReleased(KeyEvent e) {
