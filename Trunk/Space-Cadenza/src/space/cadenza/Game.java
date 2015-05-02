@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -25,13 +27,17 @@ import space.cadenza.screens.MainMenu;
  * @author Peter
  *
  */
-public class Game extends Canvas implements Runnable {
+public class Game extends Canvas implements Runnable, KeyListener {
 
 	private static final long serialVersionUID = 5363162066719528344L;
 	
 	public static final int WIDTH = 640;
 	public static final int HEIGHT = WIDTH / 4*3;
 	public static final String TITLE = "The Space Cadenza";
+
+	private static final KeyEvent VK_KP_LEFT = null;
+
+	private static final KeyEvent VK_KP_RIGHT = null;
 	private static Game game = new Game();
 	
 	public static GameState state = GameState.MENU;
@@ -140,6 +146,7 @@ public class Game extends Canvas implements Runnable {
 		JLabel image_pane = new JLabel();
 		image_pane.setBorder(BorderFactory.createMatteBorder(1,1,1,1,Color.BLACK));
 		content.add(image_pane, BorderLayout.LINE_START);
+		image_pane.setFocusable(true);
 		
 		try
 		{
@@ -179,6 +186,37 @@ public class Game extends Canvas implements Runnable {
 		}
 		
 		System.exit(1);
+	}
+
+
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		if(e == VK_KP_LEFT)
+			{
+						
+			}
+		if(e == VK_KP_RIGHT)
+			{
+						
+			}
+	}
+
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
