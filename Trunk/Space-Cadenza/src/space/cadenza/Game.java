@@ -7,7 +7,11 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import space.cadenza.enums.GameState;
+
+import space.cadenza.screens.MainMenu;
 import space.cadenza.graphics.Renderer;
+import space.cadenza.screens.MainMenu;
 
 
 /**
@@ -23,6 +27,8 @@ public class Game extends Canvas implements Runnable {
 	public static final String TITLE = "The Space Cadenza";
 	private static Game game = new Game();
 	
+	public static GameState state = GameState.MENU;
+	
 	private boolean running = false;
 	private Thread thread;
 	
@@ -31,7 +37,11 @@ public class Game extends Canvas implements Runnable {
 	public static Game getInstance(){
 		return game;
 	}
+	
+	
+	
 	public void init(){
+		MainMenu.create();
 		graphics = new Renderer();
 	}
 	
