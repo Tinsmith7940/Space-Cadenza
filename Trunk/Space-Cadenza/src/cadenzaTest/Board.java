@@ -10,11 +10,14 @@ public class Board extends JPanel implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 		Player p;
+		Asteroid a;
         public Image img;
         Timer time;
  
         public Board() {
                 p = new Player ();
+                a = new Asteroid();
+                
                 addKeyListener(new AL());
                 setFocusable(true);
                 ImageIcon i = new ImageIcon("images/Mars.jpg");
@@ -34,6 +37,7 @@ public class Board extends JPanel implements ActionListener {
  
                 g2d.drawImage(img, 0, 0, null);
                 g2d.drawImage(p.getImage(), p.getX(), p.getY(), null);
+                g2d.drawImage(a.getImage(), a.getX(), a.getY(), null);
         }
  
         private class AL extends KeyAdapter {
